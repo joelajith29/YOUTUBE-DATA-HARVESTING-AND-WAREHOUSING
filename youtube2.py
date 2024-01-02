@@ -166,7 +166,7 @@ def channel_details(channel_id):
 
 
 try:
-    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Praveen@1234')
+    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Joel@123')
 
     cur = mydb.cursor()
 
@@ -176,7 +176,7 @@ except:
 
 
 def channels_table(sel_ch):
-    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Praveen@1234', database='youtube_data')
+    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Joel@123', database='youtube_data')
     cursor = mydb.cursor()
 
     drop_query = '''drop table if exists channels'''
@@ -231,7 +231,7 @@ def channels_table(sel_ch):
 
 
 def playlist_table(sel_ch):
-    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Praveen@1234', database='youtube_data')
+    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Joel@123', database='youtube_data')
     cursor = mydb.cursor()
 
     drop_query = '''drop table if exists playlists'''
@@ -281,7 +281,7 @@ def playlist_table(sel_ch):
 
 
 def videos_table(sel_ch):
-    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Praveen@1234', database='youtube_data')
+    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Joel@123', database='youtube_data')
     cursor = mydb.cursor()
 
     drop_query = '''drop table if exists videos'''
@@ -360,7 +360,7 @@ def videos_table(sel_ch):
 
 
 def comments_table():
-    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Praveen@1234', database='youtube_data')
+    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Joel@123', database='youtube_data')
     cursor = mydb.cursor()
 
     drop_query = '''drop table if exists comments'''
@@ -455,7 +455,7 @@ selected_channel =st.multiselect('select a channel  to migrate the details into 
 st.write(f'You selected: {selected_channel}') 
 
 try:
-    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Praveen@1234', database='youtube_data')
+    mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Joel@123', database='youtube_data')
     cursor = mydb.cursor()
 except:
     pass    
@@ -491,7 +491,7 @@ question = st.selectbox('Select your question', ('1.All the videos and the chann
                                                  '10.Videos with highest number of comments',
                                                  ),index=None)
 
-mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Praveen@1234', database='youtube_data')
+mydb = pymysql.Connection(host='127.0.0.1', user='root', passwd='Joel@123', database='youtube_data')
 cursor = mydb.cursor()
 
 if question == '1.All the videos and the channel name':
